@@ -2,14 +2,14 @@
 
 1. 구조도 - base.jpg                 
  
-1.	telco api를 Polling하여 target 정보를 생성
-2.	prometheus.yml, blackbox.yml을 생성하여 각각 배포 
-3.	target정보를 가지고  blackbox_exporter에게 요청  
-4.	설정되어있는 도메인정보를 가지고 target에게 http 요청
-5.	수집된 metric을 prometheus에 제공, prometheus는 받은 metric을 tsdb에 저장
-6.	tsdb에 저장된 metric을 prometheus api를 통해 select
-7.	metric을 AMS_E2E 형식에 맞게 재구성하여 json file로 생성
-8.	telegraf custom plugin을 통해 json file 파싱하여 influxdb 저장
+ 1)	telco api를 Polling하여 target 정보를 생성
+ 2)	prometheus.yml, blackbox.yml을 생성하여 각각 배포 
+ 3)	target정보를 가지고  blackbox_exporter에게 요청  
+ 4)	설정되어있는 도메인정보를 가지고 target에게 http 요청
+ 5)	수집된 metric을 prometheus에 제공, prometheus는 받은 metric을 tsdb에 저장
+ 6)	tsdb에 저장된 metric을 prometheus api를 통해 select
+ 7)	metric을 AMS_E2E 형식에 맞게 재구성하여 json file로 생성
+ 8)	telegraf custom plugin을 통해 json file 파싱하여 influxdb 저장
 
 2. 구성요소
        
